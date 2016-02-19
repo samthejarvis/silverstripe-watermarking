@@ -1,0 +1,17 @@
+---
+Name: watermarkable
+After: 'framework/*','cms/*'
+---
+
+SiteConfig:
+  extensions:
+    - SiteConfig_WatermarkExtension
+
+Image:
+  extensions:
+    - Image_WatermarkExtension
+
+GDBackend:
+  extensions:
+    - GDBackend_WatermarkExtension
+

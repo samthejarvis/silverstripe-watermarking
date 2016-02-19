@@ -1,0 +1,24 @@
+{
+  "name"        : "samthejarvis/silverstripe-watermarking",
+  "description" : "Watermarking for images in SilverStripe",
+  "type"        : "silverstripe-module",
+  "keywords"    : [
+    "silverstripe",
+    "watermark",
+    "watermarking",
+    "images"
+  ],
+  "license"     : "MIT",
+  "authors"     : [
+    {
+      "name"  : "Sam Jarvis",
+      "email" : "sam@samjarv.is"
+    }
+  ],
+  "require"     : {
+    "silverstripe/framework" : "~3.1"
+  },
+  "extra"       : {
+    "installer-name" : "watermarking"
+  }
+}
