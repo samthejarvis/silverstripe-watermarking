@@ -42,4 +42,4 @@ The transparency parameter takes an integer from 0 to 100.
 
 
 ### Credit notes
-Configurable GD watermarking based on [memdev/silverstripe-watermarkable](http://github.com/memdev/silverstripe-watermarkabl).
+Configurable GD watermarking based on [memdev/silverstripe-watermarkable](http://github.com/memdev/silverstripe-watermarkable).
