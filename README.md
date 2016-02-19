@@ -7,7 +7,7 @@ This module adds a watermarking method for images. Chainable and available on th
 ### Installation
 
 ```
-composer require samthejarvis/silverstripe-watermarking
+composer require samthejarvis/silverstripe-watermarking dev-master
 ```
 
 Adds a Watermarking tab to /admin/settings. Here you can specify a watermark image as well as transparency and position defaults.
