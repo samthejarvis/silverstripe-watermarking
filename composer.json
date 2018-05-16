@@ -1,7 +1,7 @@
 {
   "name"        : "samthejarvis/silverstripe-watermarking",
   "description" : "Watermarking for images in SilverStripe",
-  "type"        : "silverstripe-module",
+  "type"        : "silverstripe-vendormodule",
   "keywords"    : [
     "silverstripe",
     "watermark",
@@ -16,9 +16,13 @@
     }
   ],
   "require"     : {
-    "silverstripe/framework" : "~3.1"
+    "silverstripe/framework" : "~4.0",
+    "silverstripe/vendor-plugin": "^1.0",
+    "silverstripe/asset-admin": "^1.0"
   },
-  "extra"       : {
-    "installer-name" : "watermarking"
+  "autoload": {
+    "psr-4": {
+        "samthejarvis\\SilverStripe\\Watermarking\\": "src/"
+    }
   }
 }

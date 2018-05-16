@@ -1,17 +1,14 @@
 ---
 Name: watermarkable
-After: 'framework/*','cms/*'
 ---
 
-SiteConfig:
+SilverStripe\SiteConfig\SiteConfig:
   extensions:
-    - SiteConfig_WatermarkExtension
+    - samthejarvis\SilverStripe\Watermarking\SiteConfig_WatermarkExtension
 
-Image:
+SilverStripe\Assets\Image:
   extensions:
-    - Image_WatermarkExtension
-
-GDBackend:
+    - samthejarvis\SilverStripe\Watermarking\Image_WatermarkExtension
+SilverStripe\Filesystem\Storage\DBFile:
   extensions:
-    - GDBackend_WatermarkExtension
-
+    - samthejarvis\SilverStripe\Watermarking\Image_WatermarkExtension
