@@ -11,12 +11,16 @@ use SilverStripe\AssetAdmin\Forms\UploadField;
 class SiteConfig_WatermarkExtension extends DataExtension {
     private static $db = array(
         "WatermarkTransparency" => "Int",
-        "WatermarkPosition" => "Enum('1, 2, 3, 4, 5, 6, 7, 8, 9','5')"
+        "WatermarkPosition" => "Enum('0, 1, 2, 3, 4, 5, 6, 7, 8, 9','0')"
     );
 
     private static $has_one = array(
         "Watermark" => Image::class
     );
+
+    private static $owns = [
+        "Watermark"
+    ];
 
     public function updateCMSFields(FieldList $fields) {
 
@@ -26,6 +30,7 @@ class SiteConfig_WatermarkExtension extends DataExtension {
         });
 
         $position_names = array(
+            "Tiled",
             "Bottom left",
             "Bottom",
             "Bottom right",
