@@ -28,14 +28,16 @@ $Image.CroppedImage(300, 300).Watermark(5, 50);
 
 #### Position
 The position parameter takes an integer from 1 to 9 and sets the watermark to appear to that number's corresponding position on a keypad.
+Alternatively, the position can be set to 0 which will cause the watermark to be applied in a tiling pattern.
 
 E.g. 5 will set the watermark to appear in the center.
 
 ```
-789
-456
-123
+789      000
+456  OR  000
+123      000
 ```
+
 
 #### Transparency
 The transparency parameter takes an integer from 0 to 100.
