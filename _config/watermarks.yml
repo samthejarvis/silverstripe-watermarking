@@ -9,6 +9,6 @@ SilverStripe\SiteConfig\SiteConfig:
 SilverStripe\Assets\Image:
   extensions:
     - samthejarvis\SilverStripe\Watermarking\Image_WatermarkExtension
-SilverStripe\Filesystem\Storage\DBFile:
+SilverStripe\Assets\Storage\DBFile:
   extensions:
     - samthejarvis\SilverStripe\Watermarking\Image_WatermarkExtension
