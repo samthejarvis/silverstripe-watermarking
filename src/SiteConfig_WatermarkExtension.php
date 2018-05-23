@@ -8,7 +8,8 @@ use SilverStripe\ORM\DataExtension;
 use SilverStripe\Forms\DropdownField;
 use SilverStripe\AssetAdmin\Forms\UploadField;
 
-class SiteConfig_WatermarkExtension extends DataExtension {
+class SiteConfig_WatermarkExtension extends DataExtension
+{
     private static $db = array(
         "WatermarkTransparency" => "Int",
         "WatermarkPosition" => "Enum('0, 1, 2, 3, 4, 5, 6, 7, 8, 9','0')"
@@ -22,12 +23,15 @@ class SiteConfig_WatermarkExtension extends DataExtension {
         "Watermark"
     ];
 
-    public function updateCMSFields(FieldList $fields) {
+    public function updateCMSFields(FieldList $fields) 
+    {
 
         $transparency_options = array_combine(range(10, 100, 10), range(10, 100, 10));
-        array_walk($transparency_options, function (&$value, $key) {
-            $value.="%";
-        });
+        array_walk(
+            $transparency_options, function (&$value, $key) {
+                $value.="%";
+            }
+        );
 
         $position_names = array(
             "Tiled",
@@ -47,11 +51,13 @@ class SiteConfig_WatermarkExtension extends DataExtension {
             $position_names
         );
 
-        $fields->addFieldsToTab("Root.Watermarking", array(
+        $fields->addFieldsToTab(
+            "Root.Watermarking", array(
             UploadField::create("Watermark")
                 ->setFolderName("watermarks"),
             DropdownField::create("WatermarkTransparency", "Watermark transparency", $transparency_options),
-            DropdownField::create("WatermarkPosition", "Watermark position", $position_options)	
-        ));
+            DropdownField::create("WatermarkPosition", "Watermark position", $position_options)    
+            )
+        );
     }
 }
