@@ -36,13 +36,13 @@ class Image_WatermarkExtension extends DataExtension
                 $clone = clone $backend;
                 $resource = clone $backend->getImageResource();
 
-                if (empty($watermark) || !($watermark instanceof Image) || !$watermark->ID) {
-                    return $backend->resize($image_width, $image_height);
-                }
-
                 // original image
                 $image_width = $backend->getWidth();
                 $image_height = $backend->getHeight();
+
+                if (empty($watermark) || !($watermark instanceof Image) || !$watermark->ID) {
+                  return $backend->resize($image_width, $image_height);
+                }
             
                 // watermark should not cover more than 25% of original image
                 $watermark_width = ceil($image_width / 2);
