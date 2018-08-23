@@ -13,7 +13,7 @@ composer require samthejarvis/silverstripe-watermarking dev-master
 Adds a Watermarking tab to /admin/settings. Here you can specify a watermark image as well as transparency and position defaults.
 
 ### Requirements
-- SilverStripe Framework 3.1
+- SilverStripe Framework 4+
 
 
 ### Usage
